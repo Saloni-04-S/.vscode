@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Kingdom Cares</title>
+  <style>
+    /* Reset */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: 'Segoe UI', sans-serif; line-height: 1.6; background: #f9f9f9; color: #333;}
+
+    /* Navbar */
+    header {
+      background: #2c7a7b;
+      color: white;
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {font-size: 1.5rem;}
+    nav a {
+      color: white; margin: 0 10px; text-decoration: none; font-weight: 500;
+    }
+    nav a:hover {text-decoration: underline;}
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1558788353-f76d92427f16') no-repeat center/cover;
+      color: white; text-align: center; padding: 100px 20px;
+      position: relative;
+    }
+    .hero::after {
+      content: ""; position: absolute; top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero h1, .hero p, .hero button {
+      position: relative; z-index: 1;
+    }
+    .hero h1 {font-size: 2.5rem; margin-bottom: 15px;}
+    .hero p {font-size: 1.2rem; margin-bottom: 20px;}
+    .hero button {
+      background: #ffcc00; color: #333; border: none; padding: 12px 25px;
+      font-size: 1rem; border-radius: 25px; cursor: pointer; transition: 0.3s;
+    }
+    .hero button:hover {background: #e6b800;}
+
+    /* Pets Section */
+    .pets {padding: 60px 10%; text-align: center;}
+    .pets h2 {font-size: 2rem; margin-bottom: 30px;}
+    .pet-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .pet-card {
+      background: white; border-radius: 10px; padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s;
+    }
+    .pet-card:hover {transform: translateY(-5px);}
+    .pet-card img {
+      width: 100%; height: 200px; object-fit: cover; border-radius: 10px;
+    }
+    .pet-card h3 {margin: 15px 0 10px;}
+    .pet-card p {margin-bottom: 8px;}
+    .pet-card button {
+      background: #2c7a7b; color: white; border: none; padding: 10px 20px;
+      border-radius: 20px; cursor: pointer; transition: 0.3s;
+    }
+    .pet-card button:hover {background: #225555;}
+
+    /* Adoption Form */
+    #adopt {padding: 50px 10%; background: #eef6f7; text-align: center;}
+    #adopt h2 {margin-bottom: 20px;}
+    form {
+      display: flex; flex-direction: column; max-width: 400px; margin: auto;
+      background: white; padding: 30px; border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    form input, form select, form button {
+      margin: 10px 0; padding: 12px; font-size: 1rem; border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    form button {
+      background: #2c7a7b; color: white; border: none; cursor: pointer; transition: 0.3s;
+    }
+    form button:hover {background: #225555;}
+
+    /* Footer */
+    footer {
+      background: #2c7a7b; color: white; text-align: center; padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🐾 Animal Kingdom Cares</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#pets">Available Pets</a>
+      <a href="#adopt">Adopt Now</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Give a Pet a Loving Home</h1>
+    <p>Adopt, don’t shop! Find your furry friend today.</p>
+    <button>View Pets</button>
+  </section>
+
+  <!-- Pets Section -->
+  <section id="pets" class="pets">
+    <h2>Available Pets </h2>
+    <div class="pet-grid">
+
+      <div class="pet-card">
+        <img src="https://placedog.net/400/300?id=2" alt="Dog">
+        <h3>Max</h3>
+        <p>Age: 2 years</p>
+        <p>Breed: Labrador</p>
+        <button>Adopt</button>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://placekitten.com/400/300" alt="Cat">
+        <h3>Luna</h3>
+        <p>Age: 1 year</p>
+        <p>Breed: Persian Cat</p>
+        <button>Adopt</button>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://placedog.net/400/300?id=5" alt="Dog">
+        <h3>Bella</h3>
+        <p>Age: 3 years</p>
+        <p>Breed: Golden Retriever</p>
+        <button>Adopt</button>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://placekitten.com/401/300" alt="Cat">
+        <h3>Oliver</h3>
+        <p>Age: 6 months</p>
+        <p>Breed: British Shorthair</p>
+        <button>Adopt</button>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://placedog.net/401/301?id=8" alt="Dog">
+        <h3>Charlie</h3>
+        <p>Age: 4 years</p>
+        <p>Breed: Beagle</p>
+        <button>Adopt</button>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee" alt="Rabbit">
+        <h3>Daisy</h3>
+        <p>Age: 1.5 years</p>
+        <p>Breed: Holland Lop Rabbit</p>
+        <button>Adopt</button>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://images.unsplash.com/photo-1564435768499-8c4aa0aebf25" alt="Parrot">
+        <h3>Rio</h3>
+        <p>Age: 2 years</p>
+        <p>Breed: Blue Macaw</p>
+        <button>Adopt</button>
+      </div>
+
+      <div class="pet-card">
+        <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d" alt="Dog">
+        <h3>Cooper</h3>
+        <p>Age: 1.8 years</p>
+        <p>Breed: Pug</p>
+        <button>Adopt</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Adoption Form -->
+  <section id="adopt">
+    <h2>Adoption Form</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email" required>
+      <select required>
+        <option>Select a Pet</option>
+        <option>Max (Dog)</option>
+        <option>Luna (Cat)</option>
+        <option>Bella (Dog)</option>
+        <option>Oliver (Cat)</option>
+        <option>Charlie (Dog)</option>
+        <option>Daisy (Rabbit)</option>
+        <option>Rio (Parrot)</option>
+        <option>Cooper (Dog)</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Animal Kingdom Cares | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
+
