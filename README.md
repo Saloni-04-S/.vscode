@@ -1,0 +1,2 @@
+# .vscode
+Pet information 
